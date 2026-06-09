@@ -11,12 +11,15 @@ const ProfileBanner: React.FC = () => {
   const [bannerData, setBannerData] = useState<ProfileBannerType | null>(null);
 
   useEffect(() => {
-    async function fetchData() {
-      const data = await getProfileBanner();
-      setBannerData(data);
+  setBannerData({
+    headline: "Tanza Taylor",
+    profileSummary: "Project Manager & Digital Solutions Builder",
+    linkedinLink: "https://linkedin.com",
+    resumeLink: {
+      url: "/resume.pdf"
     }
-    fetchData();
-  }, []);
+  });
+}, []);
 
   if (!bannerData) return <div>Loading...</div>;
 
