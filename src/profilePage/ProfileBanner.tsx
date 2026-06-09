@@ -12,11 +12,17 @@ const ProfileBanner: React.FC = () => {
 
   useEffect(() => {
   setBannerData({
+    backgroundImage: {
+      url: "https://images.unsplash.com/photo-1516117172878-fd2c41f4a759"
+    },
     headline: "Tanza Taylor",
     profileSummary: "Project Manager & Digital Solutions Builder",
     linkedinLink: "https://linkedin.com",
     resumeLink: {
       url: "/resume.pdf"
+    }
+  });
+}, []);
     }
   });
 }, []);
